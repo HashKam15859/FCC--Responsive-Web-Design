@@ -1,0 +1,186 @@
+/* 
+Primary Color: Deep Navy Blue (#0A192F)
+Accent Color: Black (#000000)
+Additional Color: Cool Gray (#8892B0)
+
+Primary Font: Roboto Mono
+Secondary Font: Montserrat Subrayada
+
+*/
+
+:root {
+  --primary-color: #0A192F;
+  --accent-color: #000000;
+  --additional-color: #8892B0;
+  --additional-color2: #330A21;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  animation: 15s linear infinite bg-gradient;
+  color: var(--additional-color);
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-radius: 0 0 40% 40%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--additional-color2);
+}
+
+a {
+  text-decoration: none;
+  color: var(--additional-color);
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;  
+  align-items: center;
+  margin: auto;
+}
+#projects h2 {
+  width: 100%;
+  text-align: center;
+}
+#projects div:first-child {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.project-tile {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 20px 3px var(--accent-color);
+  text-align: center;
+}
+.project-tile:after {
+  display: flex;
+  content: "";
+}
+.project-tile p {
+  border-top: 2px solid;
+  margin: 10px;
+  padding: 10px;
+}
+.project-tile a {
+  padding: 10px;
+}
+#contact-me {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+#contact-me div {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.contact {
+  margin: 20px;
+  font-size: 20px;
+}
+.contact:after {
+  display: flex;
+  content: "";
+}
+i {
+  font-size: 30px;
+}
+
+footer div {
+  width: 100%;
+  border-radius: 40% 40% 0 0;
+  background-color: var(--additional-color2);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav, #footer {
+  box-shadow: 0 0 10px 3px var(--accent-color);
+}
+/* ANIMATION */
+@keyframes bg-gradient{
+  0% {
+    background-color: #111133;
+  }
+  30% {
+    background-color: #0A2C3E;
+  }
+  60% {
+    background-color: #1F2A44;
+  }
+  80% {
+    background-color: var(--primary-color);
+  }
+  100% {
+    background-color: #111133;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .project-tile {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 750px) {
+  #projects {
+    height: 130vh;
+  }
+}
+@media (max-width: 670px) {
+  #projects {
+    height: 150vh;
+  }
+}
+@media (max-width: 455px) {
+  #projects {
+    height: 200vh;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
