@@ -1,0 +1,108 @@
+
+/*
+Primary Color: #1A1A1A (Black)
+Secondary Color: #5A5A5A (Dark gray)
+Accent Color: #00BFFF (Deep sky blue)
+Background: #F0F0F0 (Light gray)
+*/
+html {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  font-family: Ubuntu, sans-serif;
+}
+h1, h2, nav {
+  font-family: Orbitron, sans-serif;
+  color: #5A5A5A;
+}
+#main-doc {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  margin-left: 310px;
+}
+header {
+  border-bottom: 5px solid #5A5A5A;
+}
+ul {
+  list-style: circle;
+  padding-left: 0;
+}
+dt {
+  font-weight: 500px;
+  text-decoration: underline;
+}
+
+/*NAVIGATION BAR*/
+#navbar {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00BFFF;
+  width: 300px;
+  height: 100%;
+  box-shadow: 0 0 10px 0 #1A1A1A;
+  z-index: 1;
+}
+#navbar header {
+  padding-left: 5px;
+}
+#navbar ul {
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+}
+#navbar li {
+  border-bottom: 3px solid #5A5A5A;
+  padding: 5px;
+  position: relative;
+  margin: 0;
+}
+#navbar a {
+  display: block;
+  color: #1A1A1A;
+  text-decoration: none;
+  cursor: pointer;
+}
+#navbar a:hover {
+  color: #F0F0F0;
+}
+
+nav > header {
+  margin: 0;
+  text-align: center;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  #navbar ul {
+    border: 1px solid;
+    height: 150px;
+  }
+  #navbar header {
+  }
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin-top: -7px;
+    width: 100%;
+    max-height: 250px;
+    border: none;
+    z-index: 1;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top:0;
+  }
+  #Introduction_to_Quantum_Computing {
+    margin-top: 180px;
+  }
+}
